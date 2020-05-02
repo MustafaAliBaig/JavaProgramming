@@ -1,0 +1,2 @@
+ This is just an example notes to make use of copy function in git bash and to generate text file which will used used 
+ through out the programmimg
