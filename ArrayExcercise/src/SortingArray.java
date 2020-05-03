@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class SortingArray {
 	
+	/*This program is related to sorting array numbers
+	 * */
+	
 	
 	private static Scanner sc=new Scanner(System.in);
 
