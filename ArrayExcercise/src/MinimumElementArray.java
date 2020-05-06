@@ -1,5 +1,6 @@
 import java.util.Scanner;
 //This is an example of finding minimum arrays in the array list
+//We used Integer Function to find the min value
 public class MinimumElementArray {
 	private static Scanner scanner=new Scanner(System.in);
 
