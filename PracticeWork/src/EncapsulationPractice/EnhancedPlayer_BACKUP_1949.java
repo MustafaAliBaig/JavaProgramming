@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package EncapsulationPractice;
 
 public class EnhancedPlayer {
@@ -32,7 +32,7 @@ public class EnhancedPlayer {
 	
 
 }
-=======
+
 package EncapsulationPractice;
 
 public class EnhancedPlayer {
@@ -66,4 +66,3 @@ public class EnhancedPlayer {
 	
 
 }
->>>>>>> origin

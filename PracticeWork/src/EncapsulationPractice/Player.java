@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package EncapsulationPractice;
 
 public class Player {
@@ -20,7 +20,7 @@ public class Player {
 		return this.health;
 	}
 }
-=======
+
 package EncapsulationPractice;
 
 public class Player {
@@ -42,4 +42,4 @@ public class Player {
 		return this.health;
 	}
 }
->>>>>>> origin
+

@@ -15,7 +15,9 @@ public class ResizeArray {
 		baseArray[10]=44;
 		baseArray[11]=97;
 		PrintArray(baseArray);
+		
 	}
+	
 	
 	private static void InputArray()
 	{
