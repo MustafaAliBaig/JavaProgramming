@@ -27,8 +27,8 @@ public class ResizeArray {
 	private static void PrintArray(int[] array)
 	{
 	for(int i=0;i<array.length;i++)
-		System.out.println(array[i]+" ");
-	System.out.println();
+		System.out.print(array[i]+" ");
+	//System.out.println();
 	}
 	private static void resizearray()
 	{
