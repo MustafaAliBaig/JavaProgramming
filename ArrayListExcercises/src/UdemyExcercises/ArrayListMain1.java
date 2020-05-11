@@ -1,5 +1,6 @@
 package UdemyExcercises;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayListMain1 {
@@ -37,6 +38,9 @@ public class ArrayListMain1 {
 				searchForItem();
 				break;
 			case 6:
+				processArrayList();
+				break;
+			case 7:
 				quit=true;
 				System.out.println("Quiting this application");
 				break;
@@ -54,7 +58,8 @@ public class ArrayListMain1 {
 		System.out.println("\t 3-To modify an item in the list");
 		System.out.println("\t 4-To remove an item from the list");
 		System.out.println("\t 5-To search for an item in the list");
-		System.out.println("\t 6-To quit the application.");
+		System.out.println("\t 6-To Process Array List");
+		System.out.println("\t 7-To quit the application.");
 	 }
 	
 	public static void addItem()
@@ -64,28 +69,26 @@ public class ArrayListMain1 {
 	}
 public static void modifyItem()
 {
-	System.out.println("Enter Item Number: ");
-	int itemNo=scanner.nextInt();
-	scanner.nextLine();
+	System.out.println("Enter Current Item Name: ");
+	String itemNo=scanner.nextLine();
 	System.out.println("Enter replacement Item: ");
 	String newItem=scanner.nextLine();
-	groceryLsit.modifyGroceryItem(itemNo-1, newItem);
+	groceryLsit.modifyGroceryItem(itemNo, newItem);
 	}
-
+/*This is having a lot of errors so need to fix it*/
 public static void removeItem()
 {
-	System.out.println("Enter Item Number: ");
-	int itemNo=scanner.nextInt();
-	scanner.nextLine();
-	groceryLsit.removeGroceryItem(itemNo-1);
-	System.out.println("Your Item "+itemNo+" has been removed successfully ");
+	System.out.println("Enter Item Name: ");
+	String itemNo=scanner.nextLine();
+	groceryLsit.removeGroceryItem(itemNo);
+	System.out.println("Your Item "+itemNo+"is Successfully removed");
 	}
 
 public static void searchForItem()
 {
 	System.out.println("Item to search for: ");
 	String searchItem=scanner.nextLine();
-	if(groceryLsit.findItem(searchItem)!=null)
+	if(groceryLsit.onFile(searchItem))
 	{
 		System.out.println("Found "+ searchItem + " In our grocery List");
 		
@@ -94,5 +97,15 @@ public static void searchForItem()
 	{
 		System.out.println(searchItem+"Is not in the shopping list ");
 	}
+	}
+/*Process ArrayList is not fully implemented need to modify*/
+public static void processArrayList()
+{
+	ArrayList<String> newArrayList=new ArrayList<String>();
+	newArrayList.addAll(groceryLsit.getGrocerList());
+	
+	ArrayList<String> nextArray=new ArrayList<String>(groceryLsit.getGrocerList());
+	String[] myArray=new String[groceryLsit.getGrocerList().size()];
+	myArray=groceryLsit.getGrocerList().toArray(myArray);
 	}
 }
