@@ -2,7 +2,7 @@ package UdemyExcercises;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*Date 05-11-2020*/
 public class ArrayListMain1 {
 	private static Scanner scanner=new Scanner(System.in);
 	private static GroceryList groceryLsit=new GroceryList();
