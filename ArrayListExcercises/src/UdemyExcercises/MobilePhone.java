@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class MobilePhone {
 
 	private String myNumber;
-	private	ArrayList<MobileContact> myContacts;
+	private	ArrayList<MobileContact> myContacts;//We have included Arraylist as contact list will increase based on the 
+	//requirements we are going to add it. Basic operation is storage of Data.
 	public MobilePhone(String myNumber) {
 		this.myNumber = myNumber;
 		this.myContacts=new ArrayList<MobileContact>();
@@ -35,16 +36,16 @@ public class MobilePhone {
 	{
 		return this.myContacts.indexOf(contact);
 	}
-		private int findContact(String contactName)
-		{
-			for(int i=0;i<this.myContacts.size();i++)
-			{
-				MobileContact contact=this.myContacts.get(i);
-				if(contact.getName().equals(contactName)) {
+	private int findContact(String contactName)
+	{
+	for(int i=0;i<this.myContacts.size();i++)
+	{
+	MobileContact contact=this.myContacts.get(i);
+	 	if(contact.getName().equals(contactName)) {
 					return i;
-				}
-			}
-			return -1;
-		}
+	}
+	}
+	return -1;
+	}
 
 }
