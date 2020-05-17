@@ -83,6 +83,16 @@ public String queryContact(MobileContact contact)
  * We will check entire arrayList of contacts and 
  * search by each contact and print the details*/
 
+public MobileContact queryContact(String name)
+{
+	int position=findContact(name);
+	if(position>=0)
+	{
+		return this.myContacts.get(position);
+	}
+	return null;
+	}
+
 public void printContacts()
 {
 	System.out.println("Contact List ");

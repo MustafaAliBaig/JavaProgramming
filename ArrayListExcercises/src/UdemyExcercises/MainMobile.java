@@ -81,6 +81,70 @@ public class MainMobile {
 			System.out.println("Cannot add,"+name+ "Already on File ");
 		}
 	}
+	/*updateContact() is created as to update the existing record for that first we need to check is not null
+	 * Steps We need to call exisitg queryContact() and get the record and store it in object of MobileContact class
+	 * if existingContactRecord is not null then we need to update the existing contact
+	 * we have to again call static method createContact form MobileContact class and overide the existing name and number
+	 * 
+	 * */
+	private static void updateContact()
+	{
+		System.out.println("Enter the Existing contact name: ");
+		String name=scanner.nextLine();
+		MobileContact existingContactRecord=mobilephone.queryContact(name);
+		if(existingContactRecord==null) {
+			System.out.println("Contact not found");
+		return;
+		}
+		System.out.println("Enter new Contact name: ");
+		String newName=scanner.nextLine();
+		System.out.println("Enter new Contact Phone Number: ");
+		String newPhone=scanner.nextLine();
+		MobileContact newContact=MobileContact.createContact(newName,newPhone);
+		if(mobilephone.updateContact(existingContactRecord, newContact))
+		{
+			System.out.println("Successfully updated record");
+		}
+		else
+		{
+			System.out.println("Error updating record..");
+		}
+	}
+	/*static removeContact() is to remove the record from the class 
+	 * for that we will check existingContactRecord is not null
+	 * then we will  call removeContact() and remove the record successfully*/
+	private static void removeContact()
+	{
+		System.out.println("Enter the Existing contact name: ");
+		String name=scanner.nextLine();
+		MobileContact existingContactRecord=mobilephone.queryContact(name);
+		if(existingContactRecord==null) {
+			System.out.println("Contact not found");
+		return;
+		}
+		if(mobilephone.removeContact(existingContactRecord))
+		{
+			System.out.println("Successfully Deleted");
+		}
+		else
+		{
+			System.out.println("Error in deleting the record");
+		}
+	}
+	/* queryContact() is created to search for the record in the Array list
+	 *  it will check for the existingContactRecord is not null and then print out the result of the record found successfully*/
+	private static void queryContact()
+	{
+		System.out.println("Enter the Existing contact name: ");
+		String name=scanner.nextLine();
+		MobileContact existingContactRecord=mobilephone.queryContact(name);
+		if(existingContactRecord==null) {
+			System.out.println("Contact not found");
+		return;
+		}
+		System.out.println("Name: "+existingContactRecord.getName()+" Phone Number is "+existingContactRecord.getPhno());
+	}
+	
 	/*StartPhone() just displays the options as phone is started we can develop the code in Future use*/
 private static void startPhone()
 	{
