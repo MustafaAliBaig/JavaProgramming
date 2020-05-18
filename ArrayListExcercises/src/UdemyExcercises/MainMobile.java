@@ -39,6 +39,7 @@ public class MainMobile {
 				break;
 			case 1:
 				mobilephone.printContacts();
+				break;
 			case 2:
 				addNewContact();
 				break;
@@ -157,7 +158,7 @@ private static void printActions()
 	System.out.println("0 - To Shut Down\n"+ 
 						"1 - To print contacts\n"+
 						"2 - To add a new Contact\n"+
-						"3 - To update existing an existing contact\n"+
+						"3 - To update an existing contact\n"+
 						"4 - To Remove an Existing contact\n"+
 						"5 - Query if an Existing contact exists\n"+
 						"6 - To Print a list of available actions.");

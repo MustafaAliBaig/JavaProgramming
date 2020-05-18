@@ -20,13 +20,20 @@ public class MobilePhone {
 		myContacts.add(contact);
 		return true;
 	}
-	
+	/*05/18/2020
+	 * code has been updated as when we want to update the contact with already existing contact doesnot give any 
+	 * error message saying we have same contact name
+	 * */
 	public boolean updateContact(MobileContact oldContact,MobileContact newContact) {
 		int foundPosition=findContact(oldContact);
 		if(foundPosition<0)
 		{
 			System.out.println(oldContact.getName() +", was not found.");
 		return false;
+		}else if(findContact(newContact.getName())!=-1)
+		{
+			System.out.println("Contact with Name "+newContact.getName()+ " Already Exists. Update "
+								+ "Uppdate was unsuccessfull.");
 		}
 		this.myContacts.set(foundPosition, newContact);
 		System.out.println(oldContact.getName()+", Was replaced with "+newContact.getName());
