@@ -7,10 +7,10 @@ public class ArrayBoxingUnboxingMain {
 		/*Your job is to create a simple banking application
 		 *There should be a bank Class
 		 *It should have an arrayList of Branches
-		 *Each Branch should have an ArrayList o Customers
+		 *Each Branch should have an ArrayList of Customers
 		 *The Customer class should have an  arrayList of Doubles(Transactions)
 		 *Customer:
-		 *Name, and the ArrayLisy of Doubles.
+		 *Name, and the ArrayList of Doubles.
 		 *Branch:
 		 *Need to be able to add a new customer and initial transaction amount
 		 *Also needs to add additional Transactions for that customer/Branch
@@ -20,12 +20,14 @@ public class ArrayBoxingUnboxingMain {
 		 *Add a transaction for an existing customer for that branch
 		 *Show a list of customers for a particular branch and optionally a list
 		 *of their transactions
-		 *Demonstrate autoboxing and unboxing in your code
+		 *Demonstration Autoboxing and Unboxing in your code
 		 *HInt: Transactions
 		 *Add data Validation.
-		 *Eg check if exists, or does not exists, etc.
+		 *E.g. check if exists, or does not exists, etc.
 		 *Think about where you are adding the code to perform certain actions
 		 **/
+		
+		
 
 	}
 
