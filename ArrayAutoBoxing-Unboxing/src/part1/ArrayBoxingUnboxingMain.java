@@ -26,8 +26,40 @@ public class ArrayBoxingUnboxingMain {
 		 *E.g. check if exists, or does not exists, etc.
 		 *Think about where you are adding the code to perform certain actions
 		 **/
+		Bank bank =new Bank("Citi Bank");
+		bank.addBranch("Los Angeles");
+		bank.addCustomer("Los angeles", "Mustafa", 50.56);
+		bank.addCustomer("Los angeles", "Noor", 20.96);
+		bank.addCustomer("Los angeles", "Anwar", 45.67);
 		
+		bank.addBranch("Bridgeport");
+		bank.addCustomer("Brideport", "Hajera", 130.26);
 		
+		bank.addCustomer("Los angeles", "Mustafa", 22.56);
+		bank.addCustomer("Los angeles", "Mustafa", 12.96);
+		bank.addCustomer("Los angeles", "Anwar", 45.67);
+		
+		bank.listCustomers("Los angeles", true);
+		
+		if(!bank.addCustomer("San deigo", "Khaseem", 333.2))
+		{
+			System.out.println("Error in displaying San deigo Branch");
+		}
+		
+		if(!bank.addBranch("Bridgeport"))
+		{
+			System.out.println("Brigdeport Branch already Exists");
+		}
+		
+		if(!bank.addCustomerTransaction("Bridgeport", "Munawar", 22.1))
+		{
+			System.out.println("Customer doesnot Exists at the Branch");
+		}
+		
+		if(!bank.addCustomer("Bridgeport", "Mustafa", 31.11))
+		{
+			System.out.println("Customer Mustafa Already Exists on file");
+		}
 
 	}
 
