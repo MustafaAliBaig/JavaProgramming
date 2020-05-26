@@ -110,13 +110,4 @@ public void printContacts()
 							this.myContacts.get(i).getPhno());
 	}
 	}
-
-
-
-
-
-
-
-
-
 }

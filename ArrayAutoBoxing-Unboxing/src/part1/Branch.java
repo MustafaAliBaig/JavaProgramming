@@ -17,11 +17,15 @@ public class Branch {
 		return branchname;
 	}
 	
-	public boolean newCustomer(String customerName, double initalAmount)
+	public ArrayList<Customer> getCustomers() {
+		return customers;
+	}
+
+	public boolean newCustomer(String customerName, double initialAmount)
 	{
 		if(findCustomer(customerName)==null)
 		{
-			this.customers.add(new Customer(customerName, initalAmount));
+			this.customers.add(new Customer(customerName, initialAmount));
 			return true;
 		}
 		return false;
@@ -38,7 +42,6 @@ public class Branch {
 		
 	}
 	
-	
 private Customer findCustomer(String customerName)
 {
 	for (int i=0;i<this.customers.size();i++)
@@ -50,5 +53,4 @@ private Customer findCustomer(String customerName)
 	}
 	return null;
 	}
-
 }

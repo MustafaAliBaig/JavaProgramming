@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Customer {
 	private String cutomername;
-	ArrayList<Double> transactions;
+	private ArrayList<Double> transactions;
 	public Customer(String cutomername,double initalAmount) {
 		this.cutomername = cutomername;
 		this.transactions= new ArrayList<Double>();
@@ -23,7 +23,4 @@ public class Customer {
 	public ArrayList<Double> getTransactions() {
 		return transactions;
 	}
-	
-	
-
 }
