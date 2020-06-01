@@ -27,9 +27,11 @@ public class CustomizeEnum {
 		Traffic[] signals= Traffic.values();
 
 		for(Traffic signal:signals) {
-			System.out.println("Name: "+ signal.name()+" Action :"+signal.getSignal());
-
+		System.out.println("Name: "+ signal.name()+" Action :"+signal.getSignal());
+		
+			
 	}
 
 	}
+
 }
